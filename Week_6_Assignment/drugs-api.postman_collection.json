@@ -1,0 +1,156 @@
+{
+    "info": {
+      "_postman_id": "d84b830c-f5e2-4f44-a37d-d1d2dfc08301",
+      "name": "Drugs API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "GET /drugs/antibiotics",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/drugs/antibiotics",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["drugs", "antibiotics"]
+          }
+        }
+      },
+      {
+        "name": "GET /drugs/names",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/drugs/names",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["drugs", "names"]
+          }
+        }
+      },
+      {
+        "name": "POST /drugs/by-category",
+        "request": {
+          "method": "POST",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"category\": \"Analgesic\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/drugs/by-category",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["drugs", "by-category"]
+          }
+        }
+      },
+      {
+        "name": "GET /drugs/names-manufacturers",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:5000/drugs/names-manufacturers",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["drugs", "names-manufacturers"]
+          }
+        }
+      },
+      {
+        "name": "GET /drugs/prescription",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:5000/drugs/prescription",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["drugs", "prescription"]
+          }
+        }
+      },
+      {
+        "name": "GET /drugs/formatted",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:5000/drugs/formatted",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["drugs", "formatted"]
+          }
+        }
+      },
+      {
+        "name": "GET /drugs/low-stock",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:5000/drugs/low-stock",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["drugs", "low-stock"]
+          }
+        }
+      },
+      {
+        "name": "GET /drugs/non-prescription",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:5000/drugs/non-prescription",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["drugs", "non-prescription"]
+          }
+        }
+      },
+      {
+        "name": "POST /drugs/manufacturer-count",
+        "request": {
+          "method": "POST",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"manufacturer\": \"Pfizer\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/drugs/manufacturer-count",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["drugs", "manufacturer-count"]
+          }
+        }
+      },
+      {
+        "name": "GET /drugs/count-analgesics",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:5000/drugs/count-analgesics",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["drugs", "count-analgesics"]
+          }
+        }
+      }
+    ]
+  }
+  

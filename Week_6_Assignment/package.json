@@ -1,0 +1,17 @@
+{
+  "name": "week_6_assignment",
+  "version": "1.0.0",
+  "description": "Use express.json() to handle incoming POST request bodies.\r Test all your APIs using Postman.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Tosin Adewale",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
