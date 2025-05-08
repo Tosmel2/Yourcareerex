@@ -22,4 +22,4 @@
 
 9. Write a function that accepts hours worked. If hours ≥ 40, return "Full-time", else "Part-time" using a ternary operator.
 
-10. Write an arrow function that takes two numbers and returns the larger one.
+10. Write an arrow function that takes two numbers and returns the larger one..
