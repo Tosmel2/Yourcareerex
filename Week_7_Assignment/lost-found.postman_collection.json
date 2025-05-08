@@ -1,0 +1,122 @@
+{
+  "info": {
+    "name": "Lost & Found API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add a Found Item",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"itemName\": \"Blue Umbrella\",\n  \"description\": \"Left at library\",\n  \"locationFound\": \"Library front desk\",\n  \"dateFound\": \"2025-05-05T16:07:31.563767\",\n  \"claimed\": false\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/items",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "items"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Unclaimed Items",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/items/unclaimed",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "items",
+            "unclaimed"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Item By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/items/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "items",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Item By ID",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"claimed\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/items/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "items",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Item By ID",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:5000/api/items/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "items",
+            ":id"
+          ]
+        }
+      }
+    }
+  ]
+}
