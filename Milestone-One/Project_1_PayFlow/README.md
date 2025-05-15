@@ -21,6 +21,7 @@
    ```
 
 #### Folder Structure
+<pre>
 payflow-wallet-api/
 ├── controllers/
 │   └── authController.js
@@ -40,7 +41,7 @@ payflow-wallet-api/
 ├── package.json
 ├── server.js
 └── README.md
-
+</pre>
 
 ### API Endpoints
 
@@ -49,4 +50,3 @@ payflow-wallet-api/
 | POST   | /api/auth                    | Register User              |
 | POST   | /api/auth                    | Login User                 |
 | GET    | /api/wallet                  | Get wallet                 |
-

@@ -21,6 +21,7 @@
    ```
 
 ### Folder Structure
+<pre>
 homefinder/
 ├── controllers/
 │   ├── authController.js
@@ -39,7 +40,7 @@ homefinder/
 ├── .env
 ├── server.js
 ├── package.json
-
+</pre>
 
 
 ## API Endpoints

@@ -22,6 +22,7 @@
    ```
 
 ### Folder Structure
+<pre>
 freshmart-backend/
 ├── config/
 │   └── db.js
@@ -47,7 +48,7 @@ freshmart-backend/
 ├── package.json
 ├── README.md
 └── server.js
-
+</pre>
 
 ## API Endpoints
 
