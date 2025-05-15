@@ -50,4 +50,4 @@ Import `lost-found.postman_collection.json` into Postman to test the endpoints.
 - Database
 ![All items in the database](screenshots/Lost-and-found_db.png)
 
-![All items in the database](screenshots/Lost-and-found_db2.png)
+![All items in the Atlas database](screenshots/Lost-and-found_db2.png)
