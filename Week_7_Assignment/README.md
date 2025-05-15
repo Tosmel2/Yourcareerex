@@ -22,6 +22,8 @@ This is a backend server for a campus Lost & Found system built using Node.js, E
 - Database
 ![All items in the database](screenshots/Lost-and-found_db.png)
 
+![All items in the database](screenshots/Lost-and-found_db2.png)
+
 ## Setup Instructions
 
 1. Clone this repository or extract the zip.
