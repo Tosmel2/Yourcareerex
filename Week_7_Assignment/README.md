@@ -2,28 +2,6 @@
 
 This is a backend server for a campus Lost & Found system built using Node.js, Express, and MongoDB.
 
-## Features
-
-- Add a new found item
-![Add found item](screenshots/Add_Found_Item.png)
-
-- View all unclaimed items
-![Get all items](screenshots/Get-all-items.png)
-
-- View details of a single item
-![Get an item](screenshots/Get-an-items.png)
-
-- Update an item's info or claim status
-![Update an item](screenshots/Update-an-item.png)
-
-- Delete outdated items
-![Delete an item](screenshots/Delete-an-item.png)
-
-- Database
-![All items in the database](screenshots/Lost-and-found_db.png)
-
-![All items in the database](screenshots/Lost-and-found_db2.png)
-
 ## Setup Instructions
 
 1. Clone this repository or extract the zip.
@@ -50,3 +28,26 @@ This is a backend server for a campus Lost & Found system built using Node.js, E
 ## Postman
 
 Import `lost-found.postman_collection.json` into Postman to test the endpoints.
+
+
+## Features
+
+- Add a new found item
+![Add found item](screenshots/Add_Found_Item.png)
+
+- View all unclaimed items
+![Get all items](screenshots/Get-all-items.png)
+
+- View details of a single item
+![Get an item](screenshots/Get-an-items.png)
+
+- Update an item's info or claim status
+![Update an item](screenshots/Update-an-item.png)
+
+- Delete outdated items
+![Delete an item](screenshots/Delete-an-item.png)
+
+- Database
+![All items in the database](screenshots/Lost-and-found_db.png)
+
+![All items in the database](screenshots/Lost-and-found_db2.png)
