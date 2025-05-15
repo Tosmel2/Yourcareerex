@@ -48,9 +48,9 @@ BetWise/
 
 | Method | Endpoint             | Access     | Description                   |
 | ------ | -------------------- | ---------- | ----------------------------- |
-| POST   | `/api/auth/register` | Public     | Register user or agent        |
+| POST   | `/api/auth/register` | Public     | Register user                 |
 | POST   | `/api/auth/login`    | Public     | Login and get JWT             |
-| GET    | `/api/properties`    | Public     | List all properties           |
-| POST   | `/api/properties`    | Agent only | Create a new property listing |
+| GET    | `/api/games     `    | Public     | List all games                |
+| POST   | `/api/game`          | admin only | Create a new game             |
 
 
