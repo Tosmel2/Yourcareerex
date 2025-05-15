@@ -1,9 +1,9 @@
-# HOMEFINDER - Real Estate Listing Platform (HomeFinder) 
+# BetWise - Sports Betting Platform (BetWise) 
 ## Instructions
-### Roles & Property Listings
-1. Setup user roles: agent and regular user.
-2. Agents can add new property listings.
-3. Define schemas: User, Property.
+### User Setup & Game Management
+1. Register/login users with wallet balance.
+2. Admin can create games with odds.
+3. Define User, Game schemas.
 
 ## Environment Setup
 ### Setup Instructions
@@ -11,30 +11,31 @@
 2. Run `npm install` to install dependencies.
 3. Set up a MongoDB database and add the connection string to `.env`:
    ```
-   PORT=5002
-   MONGO_URI=mongodb://127.0.0.1:27017/homefinder
-   JWT_SECRET=freshmart_jwt_secret_key
+   PORT=5004
+   MONGO_URI=mongodb://127.0.0.1:27017/betwise
+   JWT_SECRET=betwise_jwt_secret_key
    ```
 4. Start the server:
    ```
    node server.js or nodemon server.js
    ```
 
+
 ### Folder Structure
 <pre>
-homefinder/
+BetWise/
 ├── controllers/
 │   ├── authController.js
-│   └── propertyController.js
+│   └── gameController.js
 ├── middleware/
 │   ├── authMiddleware.js
 │   └── roleMiddleware.js
 ├── models/
-│   ├── Property.js
+│   ├── Game.js
 │   └── User.js
 ├── routes/
 │   ├── authRoutes.js
-│   └── propertyRoutes.js
+│   └── gameoutes.js
 ├── config/
 │   └── db.js
 ├── .env
