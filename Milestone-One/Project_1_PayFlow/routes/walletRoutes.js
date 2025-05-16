@@ -6,6 +6,7 @@ const { getWallet, fundWallet } = require('../controllers/walletController');
 router.get('/', auth, getWallet);
 
 router.post('/fund', auth, fundWallet);
+// router.post('/transfer', auth, fundWallet);
 
 
 

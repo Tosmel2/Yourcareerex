@@ -61,3 +61,10 @@ payflow-wallet-api/
 
 2. Get Wallet Balance.
 ![Get Wallet Balance](screenshots/wallet-balance.png)
+
+3. Add Funds to the Wallet.
+![Add Funds](screenshots/add-funds.png)
+
+4. 2. Get Wallet Balance After Funded.
+![Get Wallet Balance After funded](screenshots/wallet-balance-afterfunded.png)
+

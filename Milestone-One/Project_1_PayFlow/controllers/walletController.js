@@ -12,8 +12,13 @@ exports.getWallet = async (req, res) => {
 
 exports.fundWallet = async (req, res) => {
   try {
+    // const { amount } = req.body;
     const { amount } = req.body;
-    const wallet = await Wallet.findOne({ user: req.user._id });
+    if (!amount || isNaN(amount) || Number(amount) <= 0) {
+      return res.status(400).json({ message: "Invalid amount" });
+    }
+
+    const wallet = await Wallet.findOne({ user: req.user.id });
 
     if (!wallet) return res.status(404).json({ message: "Wallet not found" });
 
