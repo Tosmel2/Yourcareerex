@@ -12,7 +12,10 @@ exports.register = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = await User.create({ name, email, password: hashedPassword });
 
-    await Wallet.create({ user: user._id }); // Auto-create wallet
+    await Wallet.create({ 
+      user: user._id,
+      balance: 0 
+    }); // Auto-create wallet
 
     res.status(201).json({ msg: 'User registered successfully' });
   } catch (err) {

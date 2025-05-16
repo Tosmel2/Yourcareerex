@@ -50,3 +50,14 @@ payflow-wallet-api/
 | POST   | /api/auth                    | Register User              |
 | POST   | /api/auth                    | Login User                 |
 | GET    | /api/wallet                  | Get wallet                 |
+| POST   | /api/wallet/fund             | Add funds to the wallet    |
+
+
+### Features
+1. Implement user registration and login with JWT.
+![User Registration](screenshots/register-user.png)
+
+![User Login](screenshots/login-user.png)
+
+2. Get Wallet Balance.
+![Get Wallet Balance](screenshots/wallet-balance.png)
