@@ -37,8 +37,7 @@ exports.login = async (req, res) => {
       msg: 'Login successful',
       token 
     });
-    // console.log('USER ID:', userId);
-    // console.log('JWT_SECRET during login:', process.env.JWT_SECRET);
+  
 
   } catch (err) {
     res.status(500).json({ error: err.message });

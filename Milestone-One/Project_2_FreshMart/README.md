@@ -57,6 +57,34 @@ freshmart-backend/
 | POST   | /api/auth                    | Register User              |
 | POST   | /api/auth                    | Login User                 |
 | GET    | /api/products                | Get All Products           |
-| POST   | /api/categories                | Create Category            |
-| POST   | /api/product                 | Create Product             |
+| GET    | /api/categories              | Get All Categories         |
+| POST   | /api/categories              | Create Category(Admin only)|
+| POST   | /api/product                 | Create Product (Admin only)|
+
+### Features
+1. Implement user registration and login with JWT.
+![User Registration](screenshots/register.png)
+
+![User Login](screenshots/login.png)
+
+2. Get All Categories.
+![Get All Categories](screenshots/Get-all-categories(public).png)
+
+3. Get All Products.
+![Get All Products](screenshots/Get-all-products.png)
+
+4. Create Category By Admin.
+![Create Category By Admin](screenshots/create-category_byAdminOnly.png)
+
+5. Create Product under Category
+![Create Product under Category](screenshots/create-product-under_FruitsCategory.png)
+
+6. Create Product under Category2.
+![Create Product under Category](screenshots/create-product-undercategory.png)
+
+6. As seen on DB
+![Products and Categories](screenshots/categoriesDB.png)
+
+![Products and Categories](screenshots/productsDB.png)
+
 
