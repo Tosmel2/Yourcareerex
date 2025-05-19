@@ -53,3 +53,19 @@ homefinder/
 | POST   | `/api/properties`    | Agent only | Create a new property listing |
 
 
+
+### Features
+1. Implement user registration with JWT.
+![User Registration](screenshots/register.png)
+
+2. Implement user login.
+![User Login](screenshots/login.png)
+
+2. Create Properties by agents.
+![Create Properties by agents](screenshots/create-property.png)
+
+3. Get All Properties.
+![Get All Properties](screenshots/get-all-property.png)
+
+4. Properties on DB.
+![Properties on DB](screenshots/propertiesDB.png)
