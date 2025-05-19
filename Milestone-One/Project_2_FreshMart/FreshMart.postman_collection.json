@@ -1,0 +1,122 @@
+{
+  "info": {
+    "_postman_id": "d1b4caaa-2f9b-4f5c-a56d-freshmart",
+    "name": "FreshMart API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth - Register (User/Admin)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"adminuser\",\n  \"email\": \"admin@example.com\",\n  \"password\": \"123456\",\n  \"role\": \"admin\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "auth", "register"]
+        }
+      }
+    },
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "Category - Create (Admin Only)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Fruits\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/categories",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "categories"]
+        }
+      }
+    },
+    {
+      "name": "Product - Create (Admin Only)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Banana\",\n  \"price\": 1.99,\n  \"stock\": 50,\n  \"category\": \"<CategoryID>\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "products"]
+        }
+      }
+    },
+    {
+      "name": "Product - Get All (Public)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "products"]
+        }
+      }
+    },
+    {
+      "name": "Category - Get All (Public)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/categories",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "categories"]
+        }
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}

@@ -57,6 +57,6 @@ freshmart-backend/
 | POST   | /api/auth                    | Register User              |
 | POST   | /api/auth                    | Login User                 |
 | GET    | /api/products                | Get All Products           |
-| POST   | /api/category                | Create Category            |
+| POST   | /api/categories                | Create Category            |
 | POST   | /api/product                 | Create Product             |
 
