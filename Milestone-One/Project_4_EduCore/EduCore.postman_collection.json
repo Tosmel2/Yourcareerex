@@ -1,0 +1,81 @@
+{
+  "info": {
+    "_postman_id": "0b6b7f20-4c5f-4e9e-bc93-educore-collection",
+    "name": "EduCore API",
+    "description": "API collection for EduCore (E-Learning Platform)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Jane Instructor\",\n  \"email\": \"jane@educore.com\",\n  \"password\": \"123456\",\n  \"role\": \"instructor\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5003/api/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5003",
+          "path": ["api", "auth", "register"]
+        }
+      }
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"jane@educore.com\",\n  \"password\": \"123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5003/api/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5003",
+          "path": ["api", "auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "Create Course (Instructor Only)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Node.js Masterclass\",\n  \"description\": \"Advanced backend course\",\n  \"price\": 199\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5003/api/courses",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5003",
+          "path": ["api", "courses"]
+        }
+      }
+    },
+    {
+      "name": "Get All Courses (Student or Instructor)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5003/api/courses",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5003",
+          "path": ["api", "courses"]
+        }
+      }
+    }
+  ]
+}

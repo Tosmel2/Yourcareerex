@@ -54,3 +54,18 @@ educore-backend/
 | POST   | `/api/courses   `    | Instructor only  | Create a course               |
 
 
+### Features
+1. Implement user registration with JWT.
+![User Registration](screenshots/register.png)
+
+2. Implement user login.
+![User Login](screenshots/login.png)
+
+2. Create courses by instructor.
+![Create courses by instructor](screenshots/create-course.png)
+
+3. Get All Courses.
+![Get All Courses](screenshots/get-all-courses.png)
+
+4. Properties on DB.
+![Courses on DB](screenshots/coursesDB.png)
