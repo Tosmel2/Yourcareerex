@@ -54,3 +54,19 @@ BetWise/
 | POST   | `/api/game`          | admin only | Create a new game             |
 
 
+### Features
+1. Implement user registration and login with JWT.
+![User Registration](screenshots/register.png)
+
+2. ![User Login](screenshots/login.png)
+
+3. Create Game by Admin.
+![Create Game by Admin](screenshots/create-games2.png)
+
+![Create Game by Admin](screenshots/create-games.png)
+
+4. Get All Games.
+![Get All Games](screenshots/get-all-games.png)
+
+5. All Games DB.
+![All Games on DB](screenshots/gamesDB.png)

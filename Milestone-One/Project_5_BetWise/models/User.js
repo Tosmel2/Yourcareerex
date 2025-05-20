@@ -1,25 +1,31 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcryptjs");
+const e = require('express');
 
 const userSchema = new mongoose.Schema({
   username: { 
     type: String, 
     required: true, 
     unique: true 
-},
-  password: { 
-    type: String, 
-    required: true 
-},
-  role: { 
-    type: String, 
-    enum: ['user', 'admin'], 
-    default: 'user' 
-},
-  walletBalance: { 
-    type: Number, 
-    default: 0 
-}
+  },
+  email: {
+      type: String,
+      required: true,
+      unique: true,
+  },
+    password: { 
+      type: String, 
+      required: true 
+  },
+    role: { 
+      type: String, 
+      enum: ['user', 'admin'], 
+      default: 'user' 
+  },
+    walletBalance: { 
+      type: Number, 
+      default: 0 
+  }
 });
 
 userSchema.pre('save', async function () {

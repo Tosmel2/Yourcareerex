@@ -10,17 +10,18 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/games', gameRoutes);
+app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/games', gameRoutes);
 
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log('MongoDB connected');
-  app.listen(process.env.PORT || 5004, () => console.log('Server running'));
-}).catch(err => console.error(err));
-
+// MongoDB Connection
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log('MongoDB connected');
+    app.listen(process.env.PORT, () => {
+      console.log(`Server running on port ${process.env.PORT}`);
+    });
+  })
+  .catch(err => console.log(err));
 
 
 
