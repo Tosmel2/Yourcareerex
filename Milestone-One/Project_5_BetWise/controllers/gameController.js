@@ -1,4 +1,6 @@
 const Game = require('../models/Game');
+const Wallet = require('../models/Wallet');
+
 
 exports.createGame = async (req, res) => {
   const { teamA, teamB, odds, startTime } = req.body;
@@ -19,19 +21,12 @@ exports.getAllGames = async (req, res) => {
   }
 };
 
-// const Game = require('../models/Game');
 
-// exports.createGame = async (req, res) => {
-//   const { teams, odds, scheduledDate } = req.body;
-//   try {
-//     const game = await Game.create({ teams, odds, scheduledDate });
-//     res.status(201).json({msg: "Game created successful", game});
-//   } catch (error) {
-//     res.status(400).json({ error: error.message });
-//   }
-// };
-
-// exports.getAllGames = async (req, res) => {
-//   const games = await Game.find();
-//   res.json(games);
-// };
+exports.getWallet = async (req, res) => {
+  try {
+    const wallet = await Wallet.findOne({ user: req.user.id });
+    res.json(wallet);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};

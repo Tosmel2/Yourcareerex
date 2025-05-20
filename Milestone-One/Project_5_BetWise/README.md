@@ -58,6 +58,9 @@ BetWise/
 1. Implement user registration and login with JWT.
 ![User Registration](screenshots/register.png)
 
+1. Implement user registration with Wallet Balance
+![Register with walletBalance](screenshots/register-with-walletBalance.png)
+
 2. ![User Login](screenshots/login.png)
 
 3. Create Game by Admin.
@@ -70,3 +73,7 @@ BetWise/
 
 5. All Games DB.
 ![All Games on DB](screenshots/gamesDB.png)
+
+6. All Users Details DB.
+![All Users on DB](screenshots/usersDB.png)
+
