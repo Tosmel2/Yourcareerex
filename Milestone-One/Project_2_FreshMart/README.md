@@ -5,8 +5,7 @@
 2. Implement role-based access control.
 3. Create Category & Product schemas.
 4. Admin can create categories and products.
-<!-- Features milestone two continuation -->
-Product Browsing & Orders
+##### Product Browsing & Orders
 5. Users can browse products and view product details. [Go to Image] (#get-Products-details)
 6. Users can place orders with multiple items.
 7. Create Order schema with order summary logic.
@@ -23,7 +22,7 @@ Product Browsing & Orders
    ```
 4. Start the server:
    ```
-npm run dev or nodemon server.js
+   npm run dev or nodemon server.js
    ```
 
 ### Folder Structure
