@@ -6,8 +6,8 @@
 3. Create Category & Product schemas.
 4. Admin can create categories and products.
 ##### Product Browsing & Orders
-5. Users can browse products and view product details. [Go to Image] (#get-Products-details)
-6. Users can place orders with multiple items.
+5. Users can browse products and view product details. [Go to Image](#get-products-details)
+6. Users can place orders with multiple items. [Go to Image](#multiple-orders-post)
 7. Create Order schema with order summary logic.
 
 ## Environment Setup
@@ -76,33 +76,33 @@ freshmart-backend/
 2. Get All Categories.
 ![Get All Categories](screenshots/Get-all-categories(public).png)
 
-3a. Get All Products.
+3. Get All Products.
 ![Get All Products](screenshots/Get-all-products.png)
 
-3b. Get All Products.
+4. Get All Products.
 ![Get All Products](screenshots/Get-all-products2.png)
 
-3c. Get Products details.
+5. <p id="get-products-details">Get Products details.</p>
 ![Get Products details](screenshots/Get-products-details.png)
 
-4. Create Category By Admin.
-![Create Category By Admin](screenshots/create-category_byAdminOnly.png)
+6. Create Category By Admin.
+![Create Category By Admin](screenshots/create_category_byAdminOnly.png)
 
-5. Create Product under Category
+7. Create Product under Category
 ![Create Product under Category](screenshots/create-product-under_FruitsCategory.png)
 
-6. Create Product under Category2.
+8. Create Product under Category2.
 ![Create Product under Category](screenshots/create-product-undercategory.png)
 
-6. As seen on DB
+9. As seen on DB
 ![Products and Categories](screenshots/categoriesDB.png)
 
 ![Products and Categories](screenshots/productsDB.png)
 
 ![Products and Categories](screenshots/productsDB2.png)
 
-7. Authenticated users can place orders with multiple items (POST /api/orders).
+10. <p id="multiple-orders-post">Authenticated users can place orders with multiple items (POST /api/orders).</p>
 ![Orders with Multiple Items](screenshots/place-orders.png)
 
-8. Users view all orders history placed.
+11. Users view all orders history placed.
 ![Get all orders history](screenshots/users-order-history.png)
