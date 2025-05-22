@@ -4,6 +4,11 @@
 1. Setup user roles: agent and regular user.
 2. Agents can add new property listings.
 3. Define schemas: User, Property.
+   <!-- Browsing & Saving Properties -->
+4. Users can view all listings or a specific one.
+5. Create SavedProperty schema and endpoint.
+6. Allow users to save/unsave properties. [Go to Image](#saved-unsaved)
+
 
 ## Environment Setup
 ### Setup Instructions
@@ -45,12 +50,15 @@ homefinder/
 
 ## API Endpoints
 
-| Method | Endpoint             | Access     | Description                   |
-| ------ | -------------------- | ---------- | ----------------------------- |
-| POST   | `/api/auth/register` | Public     | Register user or agent        |
-| POST   | `/api/auth/login`    | Public     | Login and get JWT             |
-| GET    | `/api/properties`    | Public     | List all properties           |
-| POST   | `/api/properties`    | Agent only | Create a new property listing |
+| Method | Endpoint                      | Access     | Description                   |
+| ------ | --------------------          | ---------- | ----------------------------- |
+| POST   | `/api/auth/register`          | Public     | Register user or agent        |
+| POST   | `/api/auth/login`             | Public     | Login and get JWT             |
+| GET    | `/api/properties`             | Public     | List all properties           |
+| POST   | `/api/properties`             | Agent only | Create a new property listing |
+| POST   | `/api/saved-properties/save`  | Public     | Saved a property              |
+| POST   | `api/saved-properties/unsave` | Public     | Unsaved a saved properties    |
+| GET    | `api/saved-properties/`       | Public     | Get all saved properties      |
 
 
 
@@ -67,5 +75,19 @@ homefinder/
 3. Get All Properties.
 ![Get All Properties](screenshots/get-all-property.png)
 
-4. Properties on DB.
+4. Get All Update Properties.
+![Get All Properties](screenshots/get-all-property2.png)
+
+5. Properties on DB.
 ![Properties on DB](screenshots/propertiesDB.png)
+
+6. <p id="#saved-unsaved">Allow users to save properties.</p>
+![Saved Properties](screenshots/saved-property.png)
+
+7. Allow users to unsave properties.
+![Unsaved Properties](screenshots/unsaved-property.png)
+
+8. Allow users to view all saved properties.
+![All saved Properties](screenshots/all-saved-properties.png)
+
+![All saved Properties one unsave](screenshots/all-saved-properties-after.png)

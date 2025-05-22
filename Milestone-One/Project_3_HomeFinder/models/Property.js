@@ -5,6 +5,7 @@ const propertySchema = new mongoose.Schema({
   description: String,
   location: String,
   price: Number,
+  images: [String],
   createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
 }, { timestamps: true });
 
