@@ -5,6 +5,11 @@
 2. Implement role-based access control.
 3. Create Category & Product schemas.
 4. Admin can create categories and products.
+<!-- Features milestone two continuation -->
+Product Browsing & Orders
+5. Users can browse products and view product details. [Go to Image] (#get-Products-details)
+6. Users can place orders with multiple items.
+7. Create Order schema with order summary logic.
 
 ## Environment Setup
 ### Setup Instructions
@@ -18,7 +23,7 @@
    ```
 4. Start the server:
    ```
-   node server.js or nodemon server.js
+npm run dev or nodemon server.js
    ```
 
 ### Folder Structure
@@ -60,6 +65,8 @@ freshmart-backend/
 | GET    | /api/categories              | Get All Categories         |
 | POST   | /api/categories              | Create Category(Admin only)|
 | POST   | /api/product                 | Create Product (Admin only)|
+| POST   | /api/orders                  | Create Orders (Public)     |
+| POST   | /api/orders/history          | Get all Orders (Public)    |
 
 ### Features
 1. Implement user registration and login with JWT.
@@ -70,8 +77,14 @@ freshmart-backend/
 2. Get All Categories.
 ![Get All Categories](screenshots/Get-all-categories(public).png)
 
-3. Get All Products.
+3a. Get All Products.
 ![Get All Products](screenshots/Get-all-products.png)
+
+3b. Get All Products.
+![Get All Products](screenshots/Get-all-products2.png)
+
+3c. Get Products details.
+![Get Products details](screenshots/Get-products-details.png)
 
 4. Create Category By Admin.
 ![Create Category By Admin](screenshots/create-category_byAdminOnly.png)
@@ -87,4 +100,10 @@ freshmart-backend/
 
 ![Products and Categories](screenshots/productsDB.png)
 
+![Products and Categories](screenshots/productsDB2.png)
 
+7. Authenticated users can place orders with multiple items (POST /api/orders).
+![Orders with Multiple Items](screenshots/place-orders.png)
+
+8. Users view all orders history placed.
+![Get all orders history](screenshots/users-order-history.png)
