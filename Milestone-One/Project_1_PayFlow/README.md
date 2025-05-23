@@ -1,9 +1,12 @@
 # PAYFLOW_WALLET - Fintech Digital Wallet System (PayFlow)
 ## Instructions
-### User Authentication & Wallet Setup
+### User Authentication & Wallet Setup & Money Transfers
 1. Implement user registration and login with JWT.
 2. Auto-create a wallet on user registration.
 3. Setup MongoDB schemas: User and Wallet.
+4. Add money transfer logic between wallets. [view image](#transfer-funds)
+5. Create Transaction schema to log each transfer.
+6. Validate balances before transfers. [view image](#update-funds)
 
 ### Environment Setup
 #### Setup Instructions
@@ -51,6 +54,8 @@ payflow-wallet-api/
 | POST   | /api/auth                    | Login User                 |
 | GET    | /api/wallet                  | Get wallet                 |
 | POST   | /api/wallet/fund             | Add funds to the wallet    |
+| POST   | /api/wallet/transfer         | Transfer Funds to others   |
+| GET    | /api/wallet/transactions     | Transaction History        |
 
 
 ### Features
@@ -68,3 +73,13 @@ payflow-wallet-api/
 4. 2. Get Wallet Balance After Funded.
 ![Get Wallet Balance After funded](screenshots/wallet-balance-afterfunded.png)
 
+5. <p id="transfer-funds">Transfer funds from wallet Balance to others by ID.</p>
+![Transfer funds from wallet Balance](screenshots/transfer-funds.png)
+
+![Sender and Receiver of Funds](screenshots/transfer_Receive.png)
+
+6. <p id="update-funds">Updated Funds After Transfer.</p>
+![Updated Funds After Transfer](screenshots/updated_balance_after_transfer.png)
+
+7. Transaction History.
+![Transaction History](screenshots/transaction_history.png)
