@@ -79,24 +79,24 @@ exports.getWallet = async (req, res) => {
 };
 
 
-// exports.fundWallet = async (req, res) => {
-//   try {
-//     // const { amount } = req.body;
-//     const { amount } = req.body;
-//     if (!amount || isNaN(amount) || Number(amount) <= 0) {
-//       return res.status(400).json({ message: "Invalid amount" });
-//     }
+exports.fundWallet = async (req, res) => {
+  try {
+    // const { amount } = req.body;
+    const { amount } = req.body;
+    if (!amount || isNaN(amount) || Number(amount) <= 0) {
+      return res.status(400).json({ message: "Invalid amount" });
+    }
 
-//     const wallet = await Wallet.findOne({ user: req.user.id });
+    const wallet = await Wallet.findOne({ user: req.user.id });
 
-//     if (!wallet) return res.status(404).json({ message: "Wallet not found" });
+    if (!wallet) return res.status(404).json({ message: "Wallet not found" });
 
-//     wallet.balance += Number(amount);
-//     await wallet.save();
+    wallet.balance += Number(amount);
+    await wallet.save();
 
-//     res.status(200).json({ message: 'Wallet funded', balance: wallet.balance });
-//   } catch (err) {
-//     res.status(500).json({ message: "Error funding wallet" });
-//   }
-// };
+    res.status(200).json({ message: 'Wallet funded', balance: wallet.balance });
+  } catch (err) {
+    res.status(500).json({ message: "Error funding wallet" });
+  }
+};
 
