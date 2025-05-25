@@ -1,9 +1,15 @@
 # BetWise - Sports Betting Platform (BetWise) 
 ## Instructions
-### User Setup & Game Management
+### User Setup, Game Management & Bet mgt Logic
 1. Register/login users with wallet balance.
 2. Admin can create games with odds.
 3. Define User, Game schemas.
+Betting Logic
+4. Users place bets on available games.[view image](#bet-placed)
+5. Create Bet schema. [view image](#wallet-funded)
+6. Deduct stake from wallet and record bet. [view image](#wallet-balance)
+
+
 
 ## Environment Setup
 ### Setup Instructions
@@ -17,7 +23,7 @@
    ```
 4. Start the server:
    ```
-   node server.js or nodemon server.js
+   npm run dev or nodemon server.js
    ```
 
 
@@ -46,12 +52,15 @@ BetWise/
 
 ## API Endpoints
 
-| Method | Endpoint             | Access     | Description                   |
-| ------ | -------------------- | ---------- | ----------------------------- |
-| POST   | `/api/auth/register` | Public     | Register user                 |
-| POST   | `/api/auth/login`    | Public     | Login and get JWT             |
-| GET    | `/api/games     `    | Public     | List all games                |
-| POST   | `/api/game`          | admin only | Create a new game             |
+| Method | Endpoint                | Access     | Description                   |
+| ------ | ----------------------- | ---------- | ----------------------------- |
+| POST   | `/api/v1/auth/register` | Public     | Register user                 |
+| POST   | `/api/v1/auth/login`    | Public     | Login and get JWT             |
+| GET    | `/api/v1/games     `    | Public     | List all games                |
+| POST   | `/api/v1/games`         | admin only | Create a new game             |
+| POST   | `/api/wallet/fund`      | public     | Fund Wallet Manually          |
+| POST   | `/api/v1/bets`          | public     | Bet(stake) on games           |
+| POST   | `/api/v1/wallet`        | public     | Wallet Balance After Stake    |
 
 
 ### Features
@@ -77,3 +86,11 @@ BetWise/
 6. All Users Details DB.
 ![All Users on DB](screenshots/usersDB.png)
 
+7. <p id="wallet-funded">Wallet Funded(Manual).</p>
+![Fund Wallet](screenshots/wallet_funded.png)
+
+8. <p id="bet-placed">Bet(Stake) on Games.</p>
+![Bet on Games](screenshots/bet-placed.png)
+
+9. <p id="wallet-balance">Wallet Balance after Bet(Stake).</p>
+![Wallet Balance](screenshots/wallet-balance-after-stake.png)
