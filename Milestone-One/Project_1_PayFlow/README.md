@@ -78,7 +78,7 @@ payflow-wallet-api/
 ![Transfer funds from wallet Balance](screenshots/transfer-funds.png)
 
 6. Transfer and Receive
-![Sender and Receiver of Funds](screenshots/transfer_Receive.png)
+![Sender and Receiver of Funds](screenshots/Transfer_Receive.png)
 
 7. <p id="update-funds">Updated Funds After Transfer.</p>
 ![Updated Funds After Transfer](screenshots/updated_balance_after_transfer.png)
