@@ -20,7 +20,7 @@
    ```
 4. Start the server:
    ```
-   node server.js or nodemon server.js
+   npm run server or nodemon server.js
    ```
 
 #### Folder Structure
@@ -32,6 +32,7 @@ payflow-wallet-api/
 ├── models/
 │   └── User.js
 │   └── Wallet.js
+│   └── Transaction.js
 ├── routes/
 │   └── authRoutes.js
 │   └── walletRoutes.js
@@ -70,16 +71,17 @@ payflow-wallet-api/
 3. Add Funds to the Wallet.
 ![Add Funds](screenshots/add-funds.png)
 
-4. 2. Get Wallet Balance After Funded.
+4. Get Wallet Balance After Funded.
 ![Get Wallet Balance After funded](screenshots/wallet-balance-afterfunded.png)
 
 5. <p id="transfer-funds">Transfer funds from wallet Balance to others by ID.</p>
 ![Transfer funds from wallet Balance](screenshots/transfer-funds.png)
 
+6. Transfer and Receive
 ![Sender and Receiver of Funds](screenshots/transfer_Receive.png)
 
-6. <p id="update-funds">Updated Funds After Transfer.</p>
+7. <p id="update-funds">Updated Funds After Transfer.</p>
 ![Updated Funds After Transfer](screenshots/updated_balance_after_transfer.png)
 
-7. Transaction History.
+8. Transaction History.
 ![Transaction History](screenshots/transaction_history.png)
