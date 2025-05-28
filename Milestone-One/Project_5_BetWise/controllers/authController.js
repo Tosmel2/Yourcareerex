@@ -17,7 +17,7 @@ exports.register = async (req, res) => {
       user: user._id,
       balance: 0 // Default balance if not provided
     }); // Auto-create wallet
-    console.log('Wallet created:', wallet);
+    // console.log('Wallet created:', wallet);
 
 
     const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET);
@@ -46,16 +46,15 @@ exports.login = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-// exports.login = async (req, res) => {
-//   const { username, password } = req.body;
+// exports.getUserProfile = async (req, res) => {
 //   try {
-//     const user = await User.findOne({ username });
-//     if (!user || !(await user.comparePassword(password))) {
-//       return res.status(401).json({ error: 'Invalid credentials' });
-//     }
-//     const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET);
-//     res.json({ msg: "Login Successful", token });
+//     const user = await User.findById(req.user.userId).select('-password');
+//     if (!user) return res.status(404).json({ msg: 'User not found' });
+
+//     const wallet = await Wallet.findOne({ user: user._id });
+//     res.json({ user, wallet });
 //   } catch (error) {
 //     res.status(500).json({ error: error.message });
 //   }
 // };
+
