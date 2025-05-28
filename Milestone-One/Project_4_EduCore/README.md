@@ -7,6 +7,10 @@
 4. Students can enroll in available courses. [View Image](#enroll)
 5. Create Enrollment schema.
 6. Instructors can view enrolled students. [View Image](#view-enroll)
+   <strong>Progress & Course Browsing</strong>
+7. Students can view their enrolled courses.[View Image](#students-view-enrollcourse)
+8. Add course detail route.
+9. Add course completion status (simple boolean flag).[View Image](#completion-status)
 
 ## Environment Setup
 ### Setup Instructions
@@ -29,15 +33,18 @@ educore-backend/
 ├── controllers/
 │   ├── authController.js
 │   └── courseController.js
+│   └── enrollmentController.js
 ├── middlewares/
 │   ├── authMiddleware.js
 │   └── roleMiddleware.js
 ├── models/
 │   ├── Course.js
 │   └── User.js
+│   └── Enrollment.js
 ├── routes/
 │   ├── authRoutes.js
 │   └── courseRoutes.js
+│   └── enrollmentRoutes.js
 ├── .env.example
 ├── app.js
 ├── package.json
@@ -49,14 +56,17 @@ educore-backend/
 
 ## API Endpoints
 
-| Method | Endpoint              | Access           | Description                   |
-| ------ | --------------------  | ---------------- | ----------------------------- |
-| POST   | `/api/auth/register`  | Public           | Register user                 |
-| POST   | `/api/auth/login`     | Public           | Login and get JWT             |
-| GET    | `/api/courses   `     | Public           | List all courses              |
-| POST   | `/api/courses   `     | Instructor only  | Create a course               |
-| POST   | `/api/enroll    `     | Student          | Enroll for a course           |
-| GET    | `/api/course/:courseId/students`     | Instructor only  | View enrolled students        |
+| Method | Endpoint                   | Access           | Description                   |
+| ------ | -------------------------  | ---------------- | --------------------          |
+| POST   | `/api/auth/register`       | Public           | Register user                 |
+| POST   | `/api/auth/login`          | Public           | Login and get JWT             |
+| GET    | `/api/courses   `          | Public           | List all courses              |
+| POST   | `/api/courses   `          | Instructor only  | Create a course               |
+| POST   | `/api/enroll    `          | Student          | Enroll for a course           |
+| GET    | `/courses/:courseId/students`| Instructor only | View enrolled students        |
+| GET    | `/api/courses/enrolled`     | Public           | View enrolled Courses         |
+| GET    | `/api/courses/:courseId`    | Pubic            | View Course details           |
+| POST   | `/courses/:courseId/complete`| Public          | Mark Course as Completed      |
 
 
 ### Features
@@ -80,3 +90,11 @@ educore-backend/
 
 6. <p id="view-enroll">Instructor views students in a course</p>
 ![Instructor view student in a course](screenshots/view_student_in_a_course.png)
+
+7. <p id="students-view-enrollcourse">Students View Enrolled Courses</p>
+![Students View Enrolled Courses](screenshots/students-view-enrollcourse.png)
+
+8. <p id="completion-status">Course Completion Status</p>
+![Course Completion Status](screenshots/completion-status.png)
+
+

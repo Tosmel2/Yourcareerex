@@ -31,3 +31,15 @@ exports.getEnrolledStudents = async (req, res) => {
     res.status(500).json({ message: 'Error fetching enrolled students' });
   }
 };
+
+exports.getEnrolledCourses = async (req, res) => {
+  try {
+    const enrollments = await Enrollment.find({ student: req.user.id }).populate('course');
+    res.json(enrollments.map(e => ({
+      course: e.course,
+      completed: e.completed
+    })));
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
