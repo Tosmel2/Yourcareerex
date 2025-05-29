@@ -5,8 +5,10 @@
 2. Auto-create a wallet on user registration.
 3. Setup MongoDB schemas: User and Wallet.
 4. Add money transfer logic between wallets. [view image](#transfer-funds)
-5. Create Transaction schema to log each transfer.
-6. Validate balances before transfers. [view image](#update-funds)
+5. Validate balances before transfers. [view image](#update-funds)<br>
+   <strong> Wallet & Transaction History</strong>
+4. View Wallet Balance. [view image](#wallet-balance)
+5. List all past transactions. [view image](#transaction-history)
 
 ### Environment Setup
 #### Setup Instructions
@@ -71,17 +73,17 @@ payflow-wallet-api/
 3. Add Funds to the Wallet.
 ![Add Funds](screenshots/add-funds.png)
 
-4. Get Wallet Balance After Funded.
-![Get Wallet Balance After funded](screenshots/wallet-balance-afterfunded.png)
-
-5. <p id="transfer-funds">Transfer funds from wallet Balance to others by ID.</p>
+4. <p id="transfer-funds">Transfer funds from wallet Balance to others by ID.</p>
 ![Transfer funds from wallet Balance](screenshots/transfer-funds.png)
 
-6. Transfer and Receive
+5. Transfer and Receive
 ![Sender and Receiver of Funds](screenshots/Transfer_Receive.png)
 
-7. <p id="update-funds">Updated Funds After Transfer.</p>
+6. <p id="update-funds">Updated Funds After Transfer.</p>
 ![Updated Funds After Transfer](screenshots/updated_balance_after_transfer.png)
 
-8. Transaction History.
+7. <p id="wallet-balance"> Get Wallet Balance After Funded.</p>
+![Get Wallet Balance After funded](screenshots/wallet-balance-afterfunded.png)
+
+8. <p id="transaction-history">Transaction History.</p>
 ![Transaction History](screenshots/transaction_history.png)
