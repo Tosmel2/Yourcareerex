@@ -10,6 +10,8 @@ router.post('/', protect, allowRoles('agent'), createProperty);
 router.get('/', getProperties);
 router.get('/', getAllProperties);
 router.get('/:id', getPropertyById);
+router.get('/?location=...&minPrice=...&maxPrice=.', getProperties);
+
 
 
 module.exports = router;
