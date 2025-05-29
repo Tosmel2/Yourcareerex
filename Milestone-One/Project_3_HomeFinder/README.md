@@ -105,7 +105,7 @@ homefinder/
 ![property filters by Location](screenshots/property-by-location.png)
 
 10. <p id="property-by-price&Location">Add property filters by Location & price.</p>
-![property filters by Location & price](screenshots/property-by-price&Location.png)
+![property filters by Location & price](screenshots/property-by-price&location.png)
 
 11. <p id="property-by-priceRange">Add property filters by Min & Max price range.</p>
 ![filters by Min & Max price range](screenshots/property-by-priceRange.png)
