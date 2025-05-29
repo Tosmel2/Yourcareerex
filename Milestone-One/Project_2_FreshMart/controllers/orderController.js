@@ -45,3 +45,16 @@ exports.getOrderHistory = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+exports.getOrderById = async (req, res) => {
+  try {
+    const order = await Order.findOne({ _id: req.params.orderId, user: req.user._id })
+      .populate('items.product', 'name price');
+    if (!order) {
+      return res.status(404).json({ msg: 'Order not found' });
+    }
+    res.json(order);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};

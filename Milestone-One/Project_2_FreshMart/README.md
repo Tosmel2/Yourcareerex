@@ -8,7 +8,8 @@
 ##### Product Browsing & Orders
 5. Users can browse products and view product details. [Go to Image](#get-products-details)
 6. Users can place orders with multiple items. [Go to Image](#multiple-orders-post)
-7. Create Order schema with order summary logic.
+7. Users can view their orders details.. [Go to Image](#order-details)
+
 
 ## Environment Setup
 ### Setup Instructions
@@ -34,6 +35,7 @@ freshmart-backend/
 │   ├── authController.js
 │   ├── productController.js
 │   └── categoryController.js
+│   └── orderController.js
 ├── middlewares/
 │   ├── authMiddleware.js
 │   └── roleMiddleware.js
@@ -41,10 +43,12 @@ freshmart-backend/
 │   ├── User.js
 │   ├── Product.js
 │   └── Category.js
+│   └── Order.js
 ├── routes/
 │   ├── authRoutes.js
 │   ├── productRoutes.js
 │   └── categoryRoutes.js
+│   └── orderRoutes.js
 ├── utils/
 │   └── generateToken.js
 ├── .env
@@ -66,6 +70,7 @@ freshmart-backend/
 | POST   | /api/product                 | Create Product (Admin only)|
 | POST   | /api/orders                  | Create Orders (Public)     |
 | POST   | /api/orders/history          | Get all Orders (Public)    |
+| POST   | /api/orders/:orderId          | User View Order Details (Public)    |
 
 ### Features
 1. Implement user registration and login with JWT.
@@ -104,5 +109,8 @@ freshmart-backend/
 10. <p id="multiple-orders-post">Authenticated users can place orders with multiple items (POST /api/orders).</p>
 ![Orders with Multiple Items](screenshots/place-orders.png)
 
-11. Users view all orders history placed.
+11.<p id="multiple-orders-post"> Users view all orders history placed.</p>
 ![Get all orders history](screenshots/users-order-history.png)
+
+12.<p id="order-details"> User View order details</p>
+![User View order details](screenshots/order-details.png)
