@@ -3,11 +3,16 @@
 ### User Setup, Game Management & Bet mgt Logic
 1. Register/login users with wallet balance.
 2. Admin can create games with odds.
-3. Define User, Game schemas.
-Betting Logic
+3. Define User, Game schemas.<br>
+<strong>Milestone 2: Betting Logic</strong>
 4. Users place bets on available games.[view image](#bet-placed)
 5. Create Bet schema. [view image](#wallet-funded)
-6. Deduct stake from wallet and record bet. [view image](#wallet-balance)
+6. Deduct stake from wallet and record bet. [view image](#wallet-balance)<br>
+<strong>Milestone 3: Results & Payouts</strong>
+7. View Bet History [view image](#user-bet-history)
+8. Set Game Results (Admin) [view image](#set-game-result)
+9. View All Results [view image](#all-results)
+
 
 
 
@@ -26,22 +31,27 @@ Betting Logic
    npm run dev or nodemon server.js
    ```
 
-
 ### Folder Structure
 <pre>
 BetWise/
 ├── controllers/
 │   ├── authController.js
 │   └── gameController.js
+│   └── betController.js
+│   └── walletController.js
 ├── middleware/
 │   ├── authMiddleware.js
 │   └── roleMiddleware.js
 ├── models/
 │   ├── Game.js
 │   └── User.js
+│   └── Wallet.js
+│   └── Bet.js
 ├── routes/
 │   ├── authRoutes.js
-│   └── gameoutes.js
+│   └── gameRoutes.js
+│   └── betRoutes.js
+│   └── walletRoutes.js
 ├── config/
 │   └── db.js
 ├── .env
@@ -61,6 +71,10 @@ BetWise/
 | POST   | `/api/wallet/fund`      | public     | Fund Wallet Manually          |
 | POST   | `/api/v1/bets`          | public     | Bet(stake) on games           |
 | POST   | `/api/v1/wallet`        | public     | Wallet Balance After Stake    |
+| GET    | `/api/v1/bets/history`  | public     | View Bet History              |
+| GET    | `/api/v1/bets/results`  | public     | View bet Results              |
+| POST   | `/games/:gameId/result` | admin only | Set Game Result               |
+
 
 
 ### Features
@@ -94,3 +108,12 @@ BetWise/
 
 9. <p id="wallet-balance">Wallet Balance after Bet(Stake).</p>
 ![Wallet Balance](screenshots/wallet-balance-after-stake.png)
+
+10. <p id="all-results">All Games Results.</p>
+![Games Results](screenshots/all-results.png)
+
+11. <p id="set-game-result">Set Game Result</p>
+![Set Game Result](screenshots/set-game-result.png)
+
+12. <p id="user-bet-hstory">Bet History</p>
+![Wallet Balance](screenshots/user-bet-history.png)

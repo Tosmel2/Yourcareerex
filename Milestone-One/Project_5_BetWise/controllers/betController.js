@@ -47,3 +47,26 @@ exports.placeBet = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+
+exports.getUserBets = async (req, res) => {
+  try {
+    const bets = await Bet.find({ user: req.user._id }).populate('game');
+    res.json(bets);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+exports.getAllResults = async (req, res) => {
+  try {
+    const games = await Game.find({ result: { $ne: null } });
+    res.json(games.map(g => ({
+      gameId: g._id,
+      teams: `${g.teamA} vs ${g.teamB}`,
+      result: g.result
+    })));
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};

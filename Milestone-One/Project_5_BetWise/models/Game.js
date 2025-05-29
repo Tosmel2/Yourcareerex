@@ -8,7 +8,8 @@ const gameSchema = new mongoose.Schema({
     draw: { type: Number, required: true },
     teamB: { type: Number, required: true }
   },
-  startTime: { type: Date, required: true }
+  startTime: { type: Date, required: true },
+  result: { type: String, enum: ['teamA', 'draw', 'teamB', null], default: null }
 });
 
 module.exports = mongoose.model('Game', gameSchema);
