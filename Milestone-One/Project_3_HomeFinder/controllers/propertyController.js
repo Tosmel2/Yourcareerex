@@ -6,9 +6,26 @@ exports.createProperty = async (req, res) => {
   res.status(201).json(property);
 };
 
+// exports.getProperties = async (req, res) => {
+//   const properties = await Property.find().populate('createdBy', 'name email');
+//   res.json(properties);
+// };
+
 exports.getProperties = async (req, res) => {
-  const properties = await Property.find().populate('createdBy', 'name email');
-  res.json(properties);
+  try {
+    const { location, minPrice, maxPrice } = req.query;
+    let filter = {};
+     if (location) filter.location = { $regex: new RegExp(location, 'i') }; // case-insensitive
+    if (minPrice || maxPrice) {
+      filter.price = {};
+      if (minPrice) filter.price.$gte = Number(minPrice);
+      if (maxPrice) filter.price.$lte = Number(maxPrice);
+    }
+    const properties = await Property.find(filter).populate('createdBy', 'name email');
+    res.json(properties);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
 
 exports.getAllProperties = async (req, res) => {
